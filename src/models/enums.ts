@@ -1,5 +1,6 @@
 export enum StandardSettings {
   FavoriteColors = 'favoriteColors',
+  PickFromFavorites = 'pickFromFavorites',
   ElementAdjustments = 'elementAdjustments',
   KeepBadgeColor = 'keepBadgeColor',
   KeepForegroundColor = 'keepForegroundColor',

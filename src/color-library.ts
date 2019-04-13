@@ -14,7 +14,9 @@ import {
   updateWorkspaceConfiguration,
   getExistingColorCustomizations,
   getDarkForegroundColorOrOverride,
-  getLightForegroundColorOrOverride
+  getLightForegroundColorOrOverride,
+  getPickFromFavorites,
+  getFavoriteColors
 } from './configuration';
 
 export function getColorHex(color = '') {
@@ -143,7 +145,8 @@ export function getDarkenedColorHex(
 }
 
 export function getRandomColorHex() {
-  return formatHex(tinycolor.random());
+    let favoriteColors = getFavoriteColors().values;
+  return getPickFromFavorites()?favoriteColors[Math.floor(Math.random() * favoriteColors.length)].value:formatHex(tinycolor.random());
 }
 
 export function getColorBrightness(input = '') {

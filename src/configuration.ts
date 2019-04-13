@@ -160,6 +160,13 @@ export function getFavoriteColors() {
   };
 }
 
+export function getPickFromFavorites() {
+    return readConfiguration<boolean>(
+      StandardSettings.PickFromFavorites,
+      false
+    );
+}
+
 export function getSurpriseMeOnStartup() {
   return readConfiguration<boolean>(
     StandardSettings.SurpriseMeOnStartup,
@@ -202,6 +209,13 @@ export async function updateKeepForegroundColor(value: boolean) {
 export async function updateKeepBadgeColor(value: boolean) {
   return await updateGlobalConfiguration(
     StandardSettings.KeepBadgeColor,
+    value
+  );
+}
+
+export async function updatePickFromFavorites(value: boolean) {
+  return await updateGlobalConfiguration(
+    StandardSettings.PickFromFavorites,
     value
   );
 }

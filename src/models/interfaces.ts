@@ -45,6 +45,7 @@ export interface IPeacockSettings {
   affectedElements: IPeacockAffectedElementSettings;
   elementAdjustments: IPeacockElementAdjustments;
   favoriteColors: IFavoriteColors[];
+  pickFromFavorites: boolean;
   keepForegroundColor: boolean;
   surpriseMeOnStartup: boolean;
   darkForegroundColor: string;

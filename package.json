@@ -138,6 +138,11 @@
           },
           "description": "Your favorite colors"
         },
+        "peacock.pickFromFavorites": {
+          "type": "boolean",
+          "default": false,
+          "description": "Specifies whether Peacock should chose randomly or from your favorites."
+        },
         "peacock.surpriseMeOnStartup": {
           "type": "boolean",
           "default": false,
